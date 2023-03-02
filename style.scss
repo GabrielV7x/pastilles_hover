@@ -1,27 +1,56 @@
-.container {
-  display: flex;
+.centered {
+  margin-top: 100px;
 
-  .shape {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    margin: 10px;
+  h1 {
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
 
-    &::after {
-      content: " ";
-      position: relative;
-      display: block;
-      top: -5px;
-      right: 5px;
-      width: 60px;
-      height: 60px;
-      border-radius: 30px;
-      border: 1px solid blue;
+    .shape {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      margin: 10px;
 
+      &::after {
+        content: " ";
+        position: relative;
+        display: block;
+        top: -5px;
+        right: 6px;
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        border: 1px solid black;
+        opacity: 0;
+        transition: opacity 0.25s;
+        transition-timing-function: linear;
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
     }
   }
+}
+  .yellow {
+    background-color: yellow;
+  }
 
-  .color {
+  .blue {
+    background-color: blue;
+  }
+  .purple {
+    background-color: purple;
+  }
+  .green {
+    background-color: green;
+  }
+  .brown {
+    background-color: brown;
+  }
+  .red {
     background-color: red;
   }
-}
